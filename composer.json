@@ -1,5 +1,5 @@
 {
-    "name": "gentor/etsy-php-laravel",
+    "name": "indeximstudio/etsy-php-laravel",
     "description": "Etsy php wrapper for Laravel",
     "license": "MIT",
     "authors": [
@@ -9,8 +9,8 @@
         }
     ],
     "require": {
-        "gentor/oauth1-etsy": "^1.0.4",
-        "illuminate/session": "^5.3"
+        "gentor/oauth1-etsy": "dev-master",
+        "illuminate/session": "^6|^7|^8|^9"
     },
     "autoload": {
         "psr-4": {
