@@ -3,6 +3,7 @@
 namespace Gentor\Etsy\Providers;
 
 use Gentor\Etsy\EtsyService;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\ServiceProvider;
 
 /**
@@ -26,7 +27,7 @@ class EtsyServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('etsy', function ($app) {
-            return new EtsyService($app['config']['etsy']);
+            return new EtsyService($app->make(Session::class), $app['config']['etsy']);
         });
     }
 
